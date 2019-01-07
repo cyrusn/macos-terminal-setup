@@ -47,9 +47,6 @@ apps=(
 ## check brew
 brew update
 
-## install cask
-brew install caskroom/cask/brew-cask
-
 ## brew install fonts
 brew tap caskroom/fonts
 
@@ -64,7 +61,3 @@ brew cleanup
 
 ## reload QuickLook
 qlmanage -r
-
-## set nvm default to system
-## https://github.com/creationix/nvm
-nvm alias default system

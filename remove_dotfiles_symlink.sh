@@ -1,5 +1,5 @@
 # setting for terminal
-location="macos-terminal-setup"
+location=".macos-terminal-setup"
 
 echo "remove symlink for .zsh-custom ..."
 \rm $HOME/.zsh-custom
