@@ -1,0 +1,38 @@
+# SEGMENT_SEPARATOR=$'\ue0b0'
+# GIT_BG=$'black'
+# GIT_FG=$'none'
+#
+# PATH_BG=$'white'
+# PATH_FG=$'black'
+
+SEGMENT_SEPARATOR=$''
+GIT_BG=$'none'
+GIT_FG=$'none'
+
+PATH_BG=$'none'
+PATH_FG=$'yellow'
+
+NAME_FG=$'green'
+
+DATE_INFO='%F{none}%D{[%T]}%f'
+USER_INFO='%F{$NAME_FG}%n%f@%F{blue}%m:%f'
+PROMPT_CHARS='%F{yellow}%#'
+RESET_COLOR='%F{none}%'
+
+PATH_POWERLINE="%F{$PATH_FG}%K{$PATH_BG}%~%f %k%F{$PATH_BG}%{$SEGMENT_SEPARATOR%}%f"
+
+PROMPT=$'$(git_prompt_info)$PATH_POWERLINE\
+$DATE_INFO $USER_INFO $PROMPT_CHARS $RESET_COLOR'
+
+ZSH_THEME_GIT_PROMPT_PREFIX="%K{$GIT_BG}%F{$GIT_FG}[on "
+ZSH_THEME_GIT_PROMPT_SUFFIX="%F{$GIT_FG}] %k%F{$GIT_BG}%K{$PATH_BG}$SEGMENT_SEPARATOR%k"
+
+ZSH_THEME_GIT_PROMPT_DIRTY="%F{red} ✘%f"
+ZSH_THEME_GIT_PROMPT_CLEAN="%F{green} ✔%f"
+
+ZSH_THEME_GIT_PROMPT_ADDED="%F{cyan} ✈%f"
+ZSH_THEME_GIT_PROMPT_MODIFIED="%F{yellow} ✭%f"
+ZSH_THEME_GIT_PROMPT_DELETED="%F{red} ✗%f"
+ZSH_THEME_GIT_PROMPT_RENAMED="%F{blue} ➦%f"
+ZSH_THEME_GIT_PROMPT_UNMERGED="%F{magenta} ✂%f"
+ZSH_THEME_GIT_PROMPT_UNTRACKED="%F{grey} ✱%f"
