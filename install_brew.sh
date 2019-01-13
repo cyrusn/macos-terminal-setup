@@ -1,7 +1,5 @@
 #!/bin/bash
 
-# use `brew leaves` to list only installed top level formulas
-
 ## check brew
 brew update
 
