@@ -19,26 +19,18 @@ export EDITOR='vim'
 export PATH=/usr/local/sbin:$PATH # for homebrew's sbin
 
 # NODE_PATH
-export NODE_PATH=$HOME/.npm-packages
+export NODE_PATH=$HOME/.npm-global
 export PATH=$NODE_PATH/bin:$PATH
-export NODE_PATH=$HOME/.npm-packages/lib/node_modules:$NODE_PATH
+export NODE_PATH=$HOME/.npm-global/lib/node_modules:$NODE_PATH
 
 launchctl setenv GRAPHVIZ_DOT /opt/local/bin/dot
 export GRAPHVIZ_DOT
-
-# brew cask path
-# brew cask already set default path to /Applications
-# export HOMEBREW_CASK_OPTS="--appdir=/Applications"
 
 # export go path
 export GOROOT=/usr/local/opt/go/libexec
 export GOPATH=$HOME/golang
 
 export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
-
-# nvm
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh" # This loads nvm
 
 # highlight less
 ### Terminal Syntax Highlighting
