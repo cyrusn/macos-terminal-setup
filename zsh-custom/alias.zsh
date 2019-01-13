@@ -113,3 +113,5 @@ alias blog="cd /Users/CyrusN/Dropbox/HugoBlog && open http://localhost:1313/ && 
 alias crontab="VIM_CRONTAB=true crontab"
 
 alias t="todo.sh"
+
+function gitignore() { curl -L -s https://www.gitignore.io/api/$@ >> .gitignore}
