@@ -1,0 +1,12 @@
+coreutils
+ffmpeg
+go
+highlight
+hugo
+imagemagick
+mysql
+node
+todo-txt
+vim
+youtube-dl
+zsh
