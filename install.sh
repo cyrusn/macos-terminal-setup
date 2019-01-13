@@ -30,11 +30,18 @@ main() {
 		ln -s $HOME/$location/zsh-custom $HOME/.zsh-custom
 	fi
 
+	## create custom dir for npm global packages
+	mkdir ~/.npm-global
+	npm config set prefix '.npm-global'
+
 	## create symlink for all dotfiles
 	bash $HOME/$location/install_dotfiles.sh
 
 	## install all brew and brew cask app
 	bash $HOME/$location/install_brew.sh
+
+	## install all npm global package
+	bash $HOME/$location/install_npm.sh
 }
 
 main

@@ -1,9 +1,11 @@
+caddy
 coreutils
 ffmpeg
 go
 highlight
 hugo
 imagemagick
+jq
 mysql
 node
 todo-txt
