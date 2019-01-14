@@ -6,6 +6,7 @@ highlight
 hugo
 imagemagick
 jq
+mongodb
 mysql
 node
 todo-txt
