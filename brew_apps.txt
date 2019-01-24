@@ -3,12 +3,14 @@ coreutils
 ffmpeg
 go
 highlight
+httpie
 hugo
 imagemagick
 jq
 mongodb
 mysql
 node
+plantuml
 todo-txt
 vim
 youtube-dl

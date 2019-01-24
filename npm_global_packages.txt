@@ -1,4 +1,6 @@
 @vue/cli
+@vue/cli-service-global
 http-server
 lodash
+npm
 standard

@@ -19,6 +19,7 @@ qlvideo
 quicklook-csv
 quicklook-json
 quicklookase
+robo-3t
 spotify
 suspicious-package
 teamviewer
