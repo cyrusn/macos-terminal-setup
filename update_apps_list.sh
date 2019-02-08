@@ -10,10 +10,10 @@ brew update
 brew upgrade
 brew cask upgrade
 brew cleanup
+echo 'upgraded brew and brew cask apps'
 
-echo 'updated brew and brew cask apps'
+npm install npm@latest -g
+echo 'upgraded npm'
 
-npm update -g npm
 npm update -g
-
 echo 'updated npm global package'
