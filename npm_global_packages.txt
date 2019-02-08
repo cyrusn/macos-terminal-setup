@@ -1,5 +1,7 @@
 @vue/cli
 @vue/cli-service-global
+eslint
+gitignore
 http-server
 lodash
 npm

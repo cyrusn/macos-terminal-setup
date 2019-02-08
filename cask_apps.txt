@@ -26,5 +26,6 @@ teamviewer
 the-unarchiver
 transmit
 visual-studio-code
+vlc
 webpquicklook
 whatsapp
