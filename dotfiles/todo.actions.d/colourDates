@@ -1,0 +1,67 @@
+#!/usr/bin/env python
+
+import os, sys, re
+
+if sys.platform.lower() == "win32":
+    os.system("color")
+
+# Group of Different functions for different styles
+class style:
+    @classmethod
+    def BLACK(self, x):
+        return "\033[30m" + str(x) + "\033[0m"
+
+    @classmethod
+    def RED(self, x):
+        return "\033[31m" + str(x) + "\033[0m"
+
+    @classmethod
+    def GREEN(self, x):
+        return "\033[32m" + str(x) + "\033[0m"
+
+    @classmethod
+    def YELLOW(self, x):
+        return "\033[33m" + str(x) + "\033[0m"
+
+    @classmethod
+    def BLUE(self, x):
+        return "\033[34m" + str(x) + "\033[0m"
+
+    @classmethod
+    def MAGENTA(self, x):
+        return "\033[35m" + str(x) + "\033[0m"
+
+    @classmethod
+    def CYAN(self, x):
+        return "\033[36m" + str(x) + "\033[0m"
+
+    @classmethod
+    def WHITE(self, x):
+        return "\033[37m" + str(x) + "\033[0m"
+
+    @classmethod
+    def UNDERLINE(self, x):
+        return "\033[4m" + str(x) + "\033[0m"
+
+
+REGEXP = re.compile(r"^(\d*)\s(\d{4}-\d{2}-\d{2})")
+THRESHOLD_REGEXP = re.compile(r"(t:\d{4}-\d{2}-\d{2})")
+OVERDUE_REGEXP = re.compile(r"(due:\d{4}-\d{2}-\d{2})")
+
+
+def highlight(line):
+    highlighted = re.sub(REGEXP, style.YELLOW(r"\g<1> ") + style.CYAN(r"\g<2>"), line)
+    highlighted = re.sub(THRESHOLD_REGEXP, style.GREEN(r"\g<1>"), highlighted)
+    highlighted = re.sub(OVERDUE_REGEXP, style.RED(r"\g<1>"), highlighted)
+    return highlighted
+
+
+def main(args=None):
+    for line in sys.stdin:
+        print(highlight(line).strip())
+    return True
+
+
+if __name__ == "__main__":
+    status = not main(sys.argv)
+    sys.exit(status)
