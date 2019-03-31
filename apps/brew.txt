@@ -1,3 +1,4 @@
+ansible
 caddy
 coreutils
 ffmpeg
@@ -9,8 +10,11 @@ imagemagick
 jq
 mongodb
 mysql
+nmap
 node
 plantuml
+sshpass
+task
 todo-txt
 vim
 youtube-dl

@@ -6,3 +6,4 @@ http-server
 lodash
 npm
 standard
+vsce

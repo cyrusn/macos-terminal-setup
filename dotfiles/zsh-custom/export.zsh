@@ -13,7 +13,7 @@ test -e ~/.dir_colors && \
    eval `gdircolors -b ~/.dir_colors`
 
 # Preferred editor for local and remote sessions
-export EDITOR='vim'
+export EDITOR='code -w'
 
 # export path
 export PATH=/usr/local/sbin:$PATH # for homebrew's sbin

@@ -112,4 +112,10 @@ alias blog="cd /Users/CyrusN/Dropbox/HugoBlog && open http://localhost:1313/ && 
 
 alias crontab="VIM_CRONTAB=true crontab"
 
-alias t="todo.sh"
+alias t="task"
+alias ta="task add"
+alias td="task done"
+alias t-="task delete"
+alias tm="task modify"
+alias tu="task undo"
+alias ts="task sync"

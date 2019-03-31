@@ -58,7 +58,7 @@ export COLOR_DONE=$LIGHT_GREY
 # There is highlighting for projects and contexts.
 #
 export COLOR_PROJECT=$BLUE
-export COLOR_CONTEXT=$PURPLE
+export COLOR_CONTEXT=$BROWN
 
 # === BEHAVIOR ===
 
@@ -68,7 +68,7 @@ export COLOR_CONTEXT=$PURPLE
 # inserted, but before colorization, and before hiding of
 # priority, context, and project.
 #
-export TODOTXT_SORT_COMMAND="$HOME/.todo.actions.d/colourDates"
+# export TODOTXT_SORT_COMMAND="$HOME/.todo.actions.d/colourDates"
 export TODOTXT_FINAL_FILTER='$HOME/.todo.actions.d/futureTasks'
 
 # TODOTXT_FINAL_FILTER will filter list output after colorization,

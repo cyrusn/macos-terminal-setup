@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 
 import os, sys, re
+from datetime import datetime
 
 if sys.platform.lower() == "win32":
     os.system("color")
@@ -50,8 +51,18 @@ OVERDUE_REGEXP = re.compile(r"(due:\d{4}-\d{2}-\d{2})")
 
 
 def highlight(line):
-    highlighted = re.sub(REGEXP, style.YELLOW(r"\g<1> ") + style.CYAN(r"\g<2>"), line)
-    highlighted = re.sub(THRESHOLD_REGEXP, style.GREEN(r"\g<1>"), highlighted)
+    highlighted = line.strip()
+    threshold = THRESHOLD_REGEXP.search(highlighted)
+    highlighted = re.sub(REGEXP, style.GREEN(r"\g<1> ") + style.CYAN(r"\g<2>"), line)
+
+    if threshold:
+        threshold_date = datetime.strptime(threshold.group(1), "t:%Y-%m-%d")
+        today = datetime.today()
+        if threshold_date <= today:
+            highlighted = re.sub(THRESHOLD_REGEXP, style.MAGENTA(r"\g<1>"), highlighted)
+        else:
+            highlighted = re.sub(THRESHOLD_REGEXP, style.GREEN(r"\g<1>"), highlighted)
+
     highlighted = re.sub(OVERDUE_REGEXP, style.RED(r"\g<1>"), highlighted)
     return highlighted
 

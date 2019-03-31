@@ -9,12 +9,12 @@ brew tap caskroom/fonts
 echo "installing brew apps..."
 while read -r line; do
     brew install "$line"
-done < "brew_apps.txt"
+done < "apps/brew.txt"
 
 echo "installing brew cask apps..."
 while read -r line; do
     brew cask install "$line"
-done < "cask_apps.txt"
+done < "apps/cask.txt"
 
 ## brew cleanup
 brew cleanup
