@@ -14,8 +14,8 @@ nmap
 node
 plantuml
 sshpass
-task
 todo-txt
 vim
+vit
 youtube-dl
 zsh

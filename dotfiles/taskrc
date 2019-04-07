@@ -11,7 +11,7 @@
 # Use the command 'task show' to see all defaults and overrides
 
 # Files
-data.location=~/Dropbox/taskwarrior/task
+data.location=~/.task
 
 # Color theme (uncomment one to use)
 #include /usr/local/share/doc/task/rc/light-16.theme
@@ -24,35 +24,45 @@ data.location=~/Dropbox/taskwarrior/task
 #include /usr/local/share/doc/task/rc/dark-violets-256.theme
 #include /usr/local/share/doc/task/rc/dark-yellow-green.theme
 #include /usr/local/share/doc/task/rc/dark-gray-256.theme
+include /usr/local/share/doc/task/rc/solarized-dark-256.theme
+
+color.tagged=none
+color.uda.priority.H=yellow
+color.uda.priority.M=green
+color.active=white on red
+uda.priority.values=H,M,,L
 
 # Sync Setting using https://freecinc.com/
 taskd.server=freecinc.com:53589
-taskd.key=/Users/cyrusn/Dropbox/taskwarrior/task/freecinc_925f8b7a.key.pem
-taskd.certificate=/Users/cyrusn/Dropbox/taskwarrior/task/freecinc_925f8b7a.cert.pem
-taskd.ca=/Users/cyrusn/Dropbox/taskwarrior/task/freecinc_925f8b7a.ca.pem
+taskd.key=/Users/cyrusn/.task/freecinc_925f8b7a.key.pem
+taskd.certificate=/Users/cyrusn/.task/freecinc_925f8b7a.cert.pem
+taskd.ca=/Users/cyrusn/.task/freecinc_925f8b7a.ca.pem
 taskd.credentials=FreeCinc/freecinc_925f8b7a/6e6c09ff-27c1-4844-b0f9-2bb5a2a1f152
 
 
 # reference https://gist.github.com/simonmichael/25cefa8b2aef4324cf3f
 
-# next
-# show annotation counts only (description -> description.count)
-# default value     id,start.age,entry.age,depends,priority,project,tags,recur,scheduled.countdown,due.remaining,until.remaining,description,urgency      
-report.next.columns=id,start.age,entry.age,depends,priority,project,tags,recur,scheduled.countdown,due.remaining,until.remaining,description.count,urgency
-
 # all
 # show full project name (project.parent -> project)
 # show tag names (tags.count -> tag)
 # default value    id,status.short,uuid.short,start.active,entry.age,end.age,depends.indicator,priority,project.parent,tags.count,recur.indicator,wait.remaining,scheduled.remaining,due,until.remaining,description
-report.all.labels=ID,St,A,Age,Done,D,P,Project,Tags,R,Wait,Sch,Due,Until,Description
-report.all.columns=id,status.short,start.active,entry.age,end.age,depends.indicator,priority,project,tags,recur.indicator,wait.remaining,scheduled.remaining,due,until.remaining,description
-report.all.sort=urgency-
-
+report.all.labels=ID,St,A,Age,Done,D,P,Project,Tags,R,Wait,Sch,Due,Until,Description,Urg
+report.all.columns=id,status.short,start.active,entry.age,end.age,depends.indicator,priority,project,tags,recur.indicator,wait.remaining,scheduled.remaining,due.countdown,until.remaining,description,urgency
+report.all.sort=project+,wait+,urgency-
+report.all.filter=status:waiting or status:pending
 
 # completed
 # show most recently completed first
 # default value       end+ 
 report.completed.sort=end-
 
+# simple report
+report.simple.description=Simple list of open tasks by project
+report.simple.labels=ID,Proj,Desc
+report.simple.columns=id,project,description.count
+report.simple.sort=project+,entry+
+report.simple.filter=status:waiting or status:pending
 
 editor=code -w
+
+search.case.sensitive=no
