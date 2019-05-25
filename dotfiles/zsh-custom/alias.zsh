@@ -34,7 +34,7 @@ alias df='df -h'
 alias du='du -ch'
 
 function copydir {
-  pwd | sed -E 's/([ |&])/\\\1/g' | tr -d "\r\n"  | pbcopy
+    pwd | sed -E 's/([ |&])/\\\1/g' | tr -d "\r\n"  | pbcopy
 }
 
 # dump $PATH, in a hunam readable way
@@ -99,7 +99,7 @@ alias update="sudo softwareupdate --install --all --background"
 
 # colorize less
 function pless () {
-  colorize "$1" | less -R
+    colorize "$1" | less -R
 }
 
 # colorize cat
@@ -121,3 +121,5 @@ alias tu="task undo"
 alias tp="task summary rc.summary.all.projects=yes 2>/dev/null"
 alias tt="task tags"
 alias ts="task sync"
+
+alias python="python3"

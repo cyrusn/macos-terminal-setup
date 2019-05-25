@@ -1,3 +1,5 @@
+#!/bin/bash
+
 # setting for terminal
 location=".macos-terminal-setup"
 

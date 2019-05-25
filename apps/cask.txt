@@ -11,6 +11,7 @@ google-chrome
 iterm2
 java
 kindle
+logitech-presentation
 microsoft-office
 qlcolorcode
 qlmarkdown
