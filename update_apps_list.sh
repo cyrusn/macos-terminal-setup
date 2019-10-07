@@ -2,20 +2,27 @@
 
 BASEDIR=$(dirname $0)
 
-echo 'updating installed apps / packages list'
-brew leaves > ${BASEDIR}/apps/brew.txt
-brew cask list -1 > ${BASEDIR}/apps/cask.txt
-npm ls -g -depth=0 --json | jq '.dependencies | keys | .[]' | cut -d '"' -f 2 > ${BASEDIR}/apps/npm_global_packages.txt
-echo 'updated list'
-
+echo 'Upgrading brew and brew cask apps...'
 brew update
 brew upgrade
 brew cask upgrade
 brew cleanup
-echo 'upgraded brew and brew cask apps'
 
+echo 'Upgrading npm ...'
 npm install npm@latest -g
-echo 'upgraded npm'
 
+echo 'Updating npm global packages ...'
 npm update -g
-echo 'updated npm global package'
+
+echo 'Updating pip3 packages ...'
+pip-review --auto
+
+echo 'All apps are updated'
+
+echo 'Updating installed apps / packages list'
+brew leaves > ${BASEDIR}/apps/brew.txt
+brew cask list -1 > ${BASEDIR}/apps/cask.txt
+npm ls -g -depth=0 --json | jq '.dependencies | keys | .[]' | cut -d '"' -f 2 > ${BASEDIR}/apps/npm_global_packages.txt
+pip3 list --not-required --format=freeze > ${BASEDIR}/apps/pip.txt
+
+echo 'Lists are updated'

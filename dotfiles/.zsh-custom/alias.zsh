@@ -123,3 +123,4 @@ alias tt="task tags"
 alias ts="task sync"
 
 alias python="python3"
+alias pip="pip3"

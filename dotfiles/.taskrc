@@ -47,8 +47,8 @@ taskd.credentials=FreeCinc/freecinc_925f8b7a/6e6c09ff-27c1-4844-b0f9-2bb5a2a1f15
 # show tag names (tags.count -> tag)
 # default value    id,status.short,uuid.short,start.active,entry.age,end.age,depends.indicator,priority,project.parent,tags.count,recur.indicator,wait.remaining,scheduled.remaining,due,until.remaining,description
 report.all.labels=ID,St,A,Age,Done,D,P,Project,Tags,R,Wait,Sch,Due,Until,Description,Urg
-report.all.columns=id,status.short,start.active,entry.age,end.age,depends.indicator,priority,project,tags,recur.indicator,wait.remaining,scheduled.remaining,due.countdown,until.remaining,description,urgency
-report.all.sort=project+,wait+,urgency-
+report.all.columns=id,status.short,start.active,entry.age,end.age,depends.indicator,priority,project,tags,recur.indicator,wait.remaining,scheduled.remaining,due.remaining,until.remaining,description,urgency
+report.all.sort=project-,wait+,urgency-
 report.all.filter=status:waiting or status:pending
 
 # completed
@@ -58,10 +58,13 @@ report.completed.sort=end-
 
 # simple report
 report.simple.description=Simple list of open tasks by project
-report.simple.labels=ID,Proj,Desc
-report.simple.columns=id,project,description.count
+report.simple.labels=ID,Proj,Due, Desc
+report.simple.columns=id,project,due.remaining,description.count
 report.simple.sort=project+,entry+
 report.simple.filter=status:waiting or status:pending
+
+# next report
+report.next.sort=project-,wait+,urgency-
 
 editor=code -w
 

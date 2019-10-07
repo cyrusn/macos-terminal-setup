@@ -3,7 +3,7 @@
 eslint
 gitignore
 http-server
-lodash
 npm
+pxt
 standard
 vsce
