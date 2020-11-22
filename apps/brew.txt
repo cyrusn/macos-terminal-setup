@@ -2,7 +2,10 @@ ansible
 caddy
 cmake
 coreutils
+docker
 ffmpeg
+fish
+fzf
 gifsicle
 go
 highlight
@@ -14,8 +17,10 @@ mysql
 nmap
 node
 plantuml
+protobuf@3.7
 python@2
 sshpass
+starship
 todo-txt
 vim
 vit

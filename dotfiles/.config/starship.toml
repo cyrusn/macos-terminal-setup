@@ -1,0 +1,42 @@
+# https://starship.rs/config/#prompt
+
+[character]
+success_symbol = "[➜](bold green) "
+error_symbol = "[✗](bold red) "
+
+[time]
+disabled = false
+format = '[$time]($style) '
+time_format = "%T"
+
+[username]
+show_always = true
+style_user = "bold black"
+format = "[ /$user ]($style) in "
+
+[python]
+python_binary = "python3"
+
+[directory]
+truncation_length = 3  # was 3
+fish_style_pwd_dir_length = 1
+read_only = "🔒"
+# truncate_to_repo = false
+
+[dotnet]
+disabled = true
+
+[conda]
+disabled = true
+
+[battery]
+disabled = true
+
+[ruby]
+disabled = true
+
+[rust]
+disabled = true
+
+[nix_shell]
+disabled = true

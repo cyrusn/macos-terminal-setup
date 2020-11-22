@@ -5,5 +5,7 @@ gitignore
 http-server
 npm
 pxt
+semistandard
 standard
+tldr
 vsce

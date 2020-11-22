@@ -4,7 +4,9 @@
 brew update
 
 ## brew install fonts
-brew tap caskroom/fonts
+brew tap homebrew/cask
+brew tap homebrew/cask-drivers
+brew tap homebrew/cask-fonts
 
 echo "Installing brew apps..."
 while read -r line; do
