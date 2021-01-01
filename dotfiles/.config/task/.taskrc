@@ -69,3 +69,8 @@ report.next.sort=project-,wait+,urgency-
 editor=code -w
 
 search.case.sensitive=no
+
+# verbose less
+verbose=blank,footnote,label,new-id,affected,edit,special,project,unwait
+
+

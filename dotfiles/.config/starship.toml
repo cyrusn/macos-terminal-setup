@@ -1,18 +1,13 @@
 # https://starship.rs/config/#prompt
 
 [character]
-success_symbol = "[➜](bold green) "
-error_symbol = "[✗](bold red) "
+success_symbol = "[➜](bold green)"
+error_symbol = "[✗](bold red)"
 
 [time]
 disabled = false
 format = '[$time]($style) '
 time_format = "%T"
-
-[username]
-show_always = true
-style_user = "bold black"
-format = "[ /$user ]($style) in "
 
 [python]
 python_binary = "python3"

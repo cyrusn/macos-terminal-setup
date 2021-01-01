@@ -57,4 +57,7 @@ set -xg TASKRC $HOME/.config/task/.taskrc
 # startup starfish
 starship init fish | source
 set -g fish_user_paths "/usr/local/opt/python@3.8/bin" $fish_user_paths
-set -g fish_user_paths "/usr/local/opt/python@3.8/bin" $fish_user_paths
+
+# startup command
+task sync
+task
