@@ -43,7 +43,7 @@ set -xg LANG en_US.UTF-8
 
 # set node path
 set -xg NODE_PATH $HOME/.npm-global
-set -xg PATH $NODE_PATH/bin $PATH
+set -xg PATH $NODE_PATH/bin ~/script $PATH 
 set -xg NODE_PATH $HOME/.npm-global/lib/node_modules $NODE_PATH
 
 # set golang path
@@ -59,5 +59,5 @@ starship init fish | source
 set -g fish_user_paths "/usr/local/opt/python@3.8/bin" $fish_user_paths
 
 # startup command
-task sync
-task
+# task sync
+# task

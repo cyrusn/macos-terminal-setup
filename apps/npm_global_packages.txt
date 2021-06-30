@@ -3,7 +3,9 @@
 eslint
 gitignore
 http-server
+lodash
 npm
+npm-check-updates
 pxt
 semistandard
 standard

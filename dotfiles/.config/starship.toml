@@ -1,8 +1,8 @@
 # https://starship.rs/config/#prompt
 
 [character]
-success_symbol = "[➜](bold green)"
-error_symbol = "[✗](bold red)"
+success_symbol = "[](bold green)"
+error_symbol = "[](bold red)"
 
 [time]
 disabled = false
@@ -15,7 +15,7 @@ python_binary = "python3"
 [directory]
 truncation_length = 3  # was 3
 fish_style_pwd_dir_length = 1
-read_only = "🔒"
+read_only = ""
 # truncate_to_repo = false
 
 [dotnet]
@@ -35,3 +35,6 @@ disabled = true
 
 [nix_shell]
 disabled = true
+
+[golang]
+symbol = 'ﳑ '

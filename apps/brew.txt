@@ -3,7 +3,6 @@ caddy
 cmake
 coreutils
 docker
-ffmpeg
 fish
 fzf
 gifsicle
@@ -16,12 +15,18 @@ jq
 mysql
 nmap
 node
+opencv
 plantuml
+poppler
 protobuf@3.7
+pyqt
 python@2
+rtmpdump
+sip
 sshpass
 starship
 todo-txt
+utf8proc
 vim
 vit
 youtube-dl
