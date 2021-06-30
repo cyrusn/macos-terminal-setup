@@ -1,4 +1,6 @@
 #!/usr/bin/env fish
+# This script is to transform A3 exam paper to A4. 
+# The middle pages are facing up while scan the exam paper
 
 set files (ls *.pdf)
 rm -rf ./output
@@ -15,10 +17,12 @@ for file in $files
 
   rm -rf ./tmp
   mkdir tmp
+  # split each pages in pdf to png
   convert "$filename" ./tmp/tmp%03d.png
   
   cd tmp
 
+  # sort the png with page number
   set tmpFiles (ls tmp*.png)
   set totalNo (count $tmpFiles)
   set width (math (identify -format "%w " $tmpFiles[1]) / 2)
@@ -39,30 +43,33 @@ for file in $files
 
   mkdir ./tmp/output
   
+  # crop the png to odd and even page
   convert ./tmp/rearranged*.png -crop "$width"x"$height"+"$width"+0 +repage ./tmp/output/odd%03d.png
   convert ./tmp/rearranged*.png -crop "$width"x"$height"+0+0 +repage ./tmp/output/even%03d.png
   
-  # rm ./tmp/*.png
   cd ./tmp/output
+
+  function movePage
+    set pIndex (string pad --char 0 -w 3 $argv[2])
+    mv $argv[1] $pIndex.png
+  end
   
+  # merge odd number page and even page together
   set oddPages (ls odd*.png)
   for i in (seq (count $oddPages))
     set index (math (math $i) x 2)
-    set pIndex (string pad --char 0 -w 3 $index)
-    mv $oddPages[$i] $pIndex.png
+    movePage $oddPages[$i] $index
   end 
 
   set evenPages (ls even*.png)
-  set i 0
-  for evenPage in $evenPages
-    set index (math (math $totalNo - $i) x 2 + 1 )
-    set pIndex (string pad --char 0 -w 3 $index)
-    mv $evenPage $pIndex.png
-    set i (math $i + 1)
+  for i in (seq (count $evenPages))
+    set index (math (math $totalNo - $i + 1) x 2 + 1 )
+    movePage $evenPages[$i] $index
   end 
 
   cd ../..
 
+  # combine the png to a pdf
   convert ./tmp/output/*.png ./output/"$rootname"_result.pdf
   rm -rf ./tmp
   echo ./output/"$rootname"_result.pdf is ready.
