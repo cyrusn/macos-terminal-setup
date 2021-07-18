@@ -27,6 +27,7 @@ logitech-presentation
 mactex
 microsoft-teams
 obs
+postman
 qlvideo
 quicklook-csv
 quicklook-json
@@ -41,7 +42,6 @@ sublime-merge
 suspicious-package
 teamviewer
 telegram-desktop
-tex-live-utility
 the-unarchiver
 transmission
 transmit
@@ -49,5 +49,6 @@ visual-studio-code
 vlc
 webpquicklook
 whatsapp
+whoozle-android-file-transfer
 xampp
 zoom

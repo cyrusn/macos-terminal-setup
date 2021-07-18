@@ -10,8 +10,10 @@ go
 highlight
 httpie
 hugo
+ilmbase
 imagemagick
 jq
+mmv
 mysql
 nmap
 node
