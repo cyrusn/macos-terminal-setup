@@ -1,15 +1,36 @@
 # This file contains fish universal variable definitions.
 # VERSION: 3.0
+SETUVAR --export ENHANCD_COMMAND:cd
+SETUVAR --export ENHANCD_COMPLETION_BEHAVIOR:default
+SETUVAR --export ENHANCD_COMPLETION_DEFAULT:1
+SETUVAR --export ENHANCD_COMPLETION_KEYBIND:\x5eI
+SETUVAR --export ENHANCD_DIR:/Users/cyrusn/\x2eenhancd
+SETUVAR --export ENHANCD_DISABLE_DOT:0
+SETUVAR --export ENHANCD_DISABLE_HOME:0
+SETUVAR --export ENHANCD_DISABLE_HYPHEN:0
+SETUVAR --export ENHANCD_DOT_ARG:\x2e\x2e
+SETUVAR --export ENHANCD_FILTER:fzy\x3afzf\x2dtmux\x3afzf\x3apeco\x3apercol\x3agof\x3apick\x3aicepick\x3asentaku\x3aselecta
+SETUVAR --export ENHANCD_HOME_ARG:
+SETUVAR --export ENHANCD_HYPHEN_ARG:\x2d
+SETUVAR --export ENHANCD_HYPHEN_NUM:10
+SETUVAR --export ENHANCD_ROOT:/Users/cyrusn/\x2econfig/fish/functions/enhancd
+SETUVAR --export ENHANCD_USE_FUZZY_MATCH:1
 SETUVAR FZF_DEFAULT_OPTS:\x2d\x2dheight\x2040\x25
 SETUVAR FZF_LEGACY_KEYBINDINGS:1
 SETUVAR FZF_PREVIEW_DIR_CMD:ls
 SETUVAR FZF_PREVIEW_FILE_CMD:head\x20\x2dn\x2010
 SETUVAR FZF_TMUX_HEIGHT:40\x25
 SETUVAR Z_DATA_DIR:/Users/cyrusn/\x2elocal/share/z
+SETUVAR --export _ENHANCD_FAILURE:60
+SETUVAR --export _ENHANCD_SUCCESS:0
+SETUVAR --export _ENHANCD_VERSION:2\x2e2\x2e4
 SETUVAR __fish_init_2_39_8:\x1d
 SETUVAR __fish_init_2_3_0:\x1d
 SETUVAR __fish_init_3_x:\x1d
 SETUVAR __fish_initialized:3100
+SETUVAR _fisher_b4b4r07_2F_enhancd_files:/Users/cyrusn/\x2econfig/fish/functions/_enhancd_alias\x2efish\x1e/Users/cyrusn/\x2econfig/fish/functions/_enhancd_cd_after\x2efish\x1e/Users/cyrusn/\x2econfig/fish/functions/_enhancd_cd_before\x2efish\x1e/Users/cyrusn/\x2econfig/fish/functions/_enhancd_cd_builtin\x2efish\x1e/Users/cyrusn/\x2econfig/fish/functions/_enhancd_command_awk\x2efish\x1e/Users/cyrusn/\x2econfig/fish/functions/_enhancd_command_grep\x2efish\x1e/Users/cyrusn/\x2econfig/fish/functions/_enhancd_command_nl\x2efish\x1e/Users/cyrusn/\x2econfig/fish/functions/_enhancd_command_run\x2efish\x1e/Users/cyrusn/\x2econfig/fish/functions/_enhancd_command_which\x2efish\x1e/Users/cyrusn/\x2econfig/fish/functions/_enhancd_complete\x2efish\x1e/Users/cyrusn/\x2econfig/fish/functions/_enhancd_entry_git_root\x2efish\x1e/Users/cyrusn/\x2econfig/fish/functions/_enhancd_filepath_abs\x2efish\x1e/Users/cyrusn/\x2econfig/fish/functions/_enhancd_filepath_current_dir\x2efish\x1e/Users/cyrusn/\x2econfig/fish/functions/_enhancd_filepath_list_step\x2efish\x1e/Users/cyrusn/\x2econfig/fish/functions/_enhancd_filepath_split\x2efish\x1e/Users/cyrusn/\x2econfig/fish/functions/_enhancd_filepath_split_list\x2efish\x1e/Users/cyrusn/\x2econfig/fish/functions/_enhancd_filepath_walk\x2efish\x1e/Users/cyrusn/\x2econfig/fish/functions/_enhancd_filter_exclude\x2efish\x1e/Users/cyrusn/\x2econfig/fish/functions/_enhancd_filter_exclude_commented\x2efish\x1e/Users/cyrusn/\x2econfig/fish/functions/_enhancd_filter_exclude_gitignore\x2efish\x1e/Users/cyrusn/\x2econfig/fish/functions/_enhancd_filter_exists\x2efish\x1e/Users/cyrusn/\x2econfig/fish/functions/_enhancd_filter_fuzzy\x2efish\x1e/Users/cyrusn/\x2econfig/fish/functions/_enhancd_filter_interactive\x2efish\x1e/Users/cyrusn/\x2econfig/fish/functions/_enhancd_filter_join\x2efish\x1e/Users/cyrusn/\x2econfig/fish/functions/_enhancd_filter_limit\x2efish\x1e/Users/cyrusn/\x2econfig/fish/functions/_enhancd_filter_replace\x2efish\x1e/Users/cyrusn/\x2econfig/fish/functions/_enhancd_filter_reverse\x2efish\x1e/Users/cyrusn/\x2econfig/fish/functions/_enhancd_filter_trim\x2efish\x1e/Users/cyrusn/\x2econfig/fish/functions/_enhancd_filter_unique\x2efish\x1e/Users/cyrusn/\x2econfig/fish/functions/_enhancd_flag_is_default\x2efish\x1e/Users/cyrusn/\x2econfig/fish/functions/_enhancd_flag_parse\x2efish\x1e/Users/cyrusn/\x2econfig/fish/functions/_enhancd_flag_print_help\x2efish\x1e/Users/cyrusn/\x2econfig/fish/functions/_enhancd_help\x2efish\x1e/Users/cyrusn/\x2econfig/fish/functions/_enhancd_history_list\x2efish\x1e/Users/cyrusn/\x2econfig/fish/functions/_enhancd_history_open\x2efish\x1e/Users/cyrusn/\x2econfig/fish/functions/_enhancd_history_update\x2efish\x1e/Users/cyrusn/\x2econfig/fish/functions/_enhancd_ltsv_get\x2efish\x1e/Users/cyrusn/\x2econfig/fish/functions/_enhancd_ltsv_open\x2efish\x1e/Users/cyrusn/\x2econfig/fish/functions/_enhancd_ltsv_parse\x2efish\x1e/Users/cyrusn/\x2econfig/fish/functions/_enhancd_source_argument\x2efish\x1e/Users/cyrusn/\x2econfig/fish/functions/_enhancd_source_default\x2efish\x1e/Users/cyrusn/\x2econfig/fish/functions/_enhancd_source_go_up\x2efish\x1e/Users/cyrusn/\x2econfig/fish/functions/_enhancd_source_is_available\x2efish\x1e/Users/cyrusn/\x2econfig/fish/functions/_enhancd_source_mru\x2efish\x1e/Users/cyrusn/\x2econfig/fish/functions/enhancd\x1e/Users/cyrusn/\x2econfig/fish/functions/enhancd\x2efish\x1e/Users/cyrusn/\x2econfig/fish/conf\x2ed/enhancd\x2efish
+SETUVAR _fisher_danhper_2F_fish_2D_ssh_2D_agent_files:/Users/cyrusn/\x2econfig/fish/functions/__ssh_agent_is_started\x2efish\x1e/Users/cyrusn/\x2econfig/fish/functions/__ssh_agent_start\x2efish\x1e/Users/cyrusn/\x2econfig/fish/conf\x2ed/fish\x2dssh\x2dagent\x2efish
+SETUVAR _fisher_plugins:b4b4r07/enhancd\x1edanhper/fish\x2dssh\x2dagent
 SETUVAR fish_color_autosuggestion:969896
 SETUVAR fish_color_cancel:\x2dr
 SETUVAR fish_color_command:b294bb
