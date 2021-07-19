@@ -8,26 +8,21 @@ function split_pdf -a pdf -d "split a PDF file"
     or return
 
     if set -q _flag_help
-        _split_pdf_with_name_help
+        _split_pdf_help
         return
     end
 
     if ! test -e "$pdf"
-        echo "A path of a PDF file is required as an argument."
+        echo "A path of a PDF file is required as an argument." >&2
         return
     end
 
-    if ! type -f convert >/dev/null
-        echo "Please install imagick before using this function"
-        echo "Ref: https://imagemagick.org/index.php"
-        return
-    end
-
-
+    _check_imagick
 
     set -q _flag_dpi; or set _flag_dpi 200
-    set -q _flag_noOfPages; or set noOfPages 1
     set dpi $_flag_dpi
+
+    set -q _flag_noOfPages; or set noOfPages 1
     set noOfPages $_flag_noOfPages
 
     # split each pages in pdf to png
@@ -56,20 +51,21 @@ function split_pdf -a pdf -d "split a PDF file"
     rm -rf ./tmp
 end
 
-function _split_pdf_with_name_help
+function _split_pdf_help
     echo "Split PDF "
-    echo "v1.0.0"
     echo ""
     echo "Split PDF splits a given PDF file by the no of page provided (default is 1)."
     echo "If users have the list of output filenames, use -l --list option."
     echo ""
-    echo "Usage: split_pdf file [options]"
+    echo "Usage: split_pdf file [Options]"
     echo ""
     echo "Options:"
     echo "    -n, --noOfPages    The number of page of each splited PDF. default 1"
     echo "    -l, --list         The path of a txt file which stores the output filenames."
     echo "                       If this option is omited, the output filename is `output_%3d.pdf`"
     echo "    -d, --dpi          The dpi value for the converted file. default 200"
+    echo ""
+    echo "Version: 1.0.0"
 end
 
 function _clean_up
